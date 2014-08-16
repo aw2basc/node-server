@@ -1,7 +1,8 @@
 var http = require('http'),
 	fs = require('fs'),
+	path = require('path'),
 	mimeTypes = require('./mimeTypes.json'),
-	filePath = __dirname + '/public/';
+	filePath = path.resolve(__dirname, '..');
 
 var fourOhFour = function(res){
 	res.writeHead(404);
